@@ -28,7 +28,7 @@
             android:layout_width="wrap_content"
             android:id="@+id/sourceText"
             android:textStyle="bold"
-            android:layout_weight="8dp"
+            android:layout_weight="8"
             android:textSize="23sp"
             android:layout_height="wrap_content" />
 

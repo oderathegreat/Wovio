@@ -2,6 +2,7 @@ package com.chat.app.wovio.Adapter;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
@@ -65,7 +66,11 @@ public class ListSourceAdapter extends RecyclerView.Adapter<ListSouceViewHolde> 
 
     @Override
     public ListSouceViewHolde onCreateViewHolder(ViewGroup parent, int viewType) {
-        return null;
+
+        LayoutInflater inflater = LayoutInflater.from(parent.getContext());
+        View view = inflater.inflate(R.layout.sourcelayout,parent,false);
+
+        return new ListSouceViewHolde(view);
     }
 
     @Override
@@ -75,6 +80,6 @@ public class ListSourceAdapter extends RecyclerView.Adapter<ListSouceViewHolde> 
 
     @Override
     public int getItemCount() {
-        return 0;
+        return webRemote.getSourcelist().size();
     }
 }
