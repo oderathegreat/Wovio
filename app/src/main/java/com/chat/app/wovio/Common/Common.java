@@ -1,6 +1,8 @@
 package com.chat.app.wovio.Common;
 
+import com.chat.app.wovio.Interface.IconFetchService;
 import com.chat.app.wovio.Interface.NewsServe;
+import com.chat.app.wovio.Remote.IconServiceClient;
 import com.chat.app.wovio.Remote.RetroClient;
 
 /**
@@ -19,5 +21,13 @@ public class Common {
 
    }
 
+
+
+
+    public static IconFetchService getIconService(){
+        return IconServiceClient.getClient().create(IconFetchService.class);
+
+
+    }
 
 }

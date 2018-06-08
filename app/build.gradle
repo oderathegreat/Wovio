@@ -36,6 +36,8 @@ dependencies {
     compile 'com.github.d-max:spots-dialog:0.7@aar'
     implementation 'de.hdodenhof:circleimageview:2.2.0'
     implementation 'com.squareup.picasso:picasso:2.71828'
+    compile 'io.paperdb:paperdb:2.6'
+
 
 
 
