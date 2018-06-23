@@ -13,9 +13,14 @@ import com.chat.app.wovio.Interface.NewsServe;
 import com.chat.app.wovio.Model.WebRemote;
 import com.google.gson.Gson;
 
+import java.io.IOException;
+
 import dmax.dialog.SpotsDialog;
 import io.paperdb.Paper;
+import okhttp3.Request;
 import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -68,7 +73,48 @@ public class MainActivity extends AppCompatActivity {
 
            dialog.show();
            //source/fecth new data
-           mNewsServe.
+
+           new Call<WebRemote>() {
+
+               @Override
+               public Response<WebRemote> execute() throws IOException {
+                   return null;
+               }
+
+               @Override
+               public void enqueue(Callback<WebRemote> callback) {
+
+               }
+
+               @Override
+               public boolean isExecuted() {
+
+                  /* Paper.book().write("cache", new Gson().toJson())*/
+                   return false;
+               }
+
+               @Override
+               public void cancel() {
+
+               }
+
+               @Override
+               public boolean isCanceled() {
+                   return false;
+               }
+
+               @Override
+               public Call<WebRemote> clone() {
+                   return null;
+               }
+
+               @Override
+               public Request request() {
+                   return null;
+               }
+           }.enqueue(mNewsServe.getSources());
+
+
 
        }
 

@@ -2,9 +2,6 @@ package com.chat.app.wovio.Model;
 
 import java.util.List;
 
-/**
- * Created by Hp on 6/8/2018.
- */
 
 class UrlsToLogos{
    private String small,medium,large;
